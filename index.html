@@ -145,14 +145,21 @@
     $(document).ready(function() {
       //Set Local Storage if Available
       var eventArray = JSON.parse(localStorage.getItem("allEvents"));
-      console.log(eventArray);
+      if (eventArray != null) {
+        $(".form-control").each(function() {
+          for (let i = 0; i < eventArray.length; i++) {
+            if ($(this).attr("data-value") == eventArray[i].time) {
+              $(this).val(eventArray[i].event);
+            }
+          }
+        })
+      }
 
       //Time and Date at Top of Page
       $("#currentDay").html((moment().format('MMMM Do YYYY')) + "<br><br>" + moment().format('LT'));
       //Colors Text Boxes Depending on Time
       $(".form-control").each(function() {
         var hourBlock = $(this).attr("data-value");
-        console.log(hourBlock)
         if (hourBlock < moment().hour()) {
           $(this).css("background-color", "grey");
         } else if (hourBlock == moment().hour()) {
