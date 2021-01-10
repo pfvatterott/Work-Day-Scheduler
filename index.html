@@ -143,27 +143,34 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
+      //Set Local Storage if Available
+      var eventArray = JSON.parse(localStorage.getItem("allEvents"));
+      console.log(eventArray);
+
       //Time and Date at Top of Page
       $("#currentDay").html((moment().format('MMMM Do YYYY')) + "<br><br>" + moment().format('LT'));
-    })
-    //Colors Text Boxes Depending on Time
-    $(".form-control").each(function() {
-      var hourBlock = $(this).attr("data-value");
-      console.log(hourBlock)
-      if (hourBlock < moment().hour()) {
-        $(this).css("background-color", "grey");
-      } else if (hourBlock == moment().hour()) {
-        $(this).css("background-color", "red");
-      } else if (hourBlock > moment().hour()) {
-        $(this).css("background-color", "lightgreen");
-      }
-    })
+      //Colors Text Boxes Depending on Time
+      $(".form-control").each(function() {
+        var hourBlock = $(this).attr("data-value");
+        console.log(hourBlock)
+        if (hourBlock < moment().hour()) {
+          $(this).css("background-color", "grey");
+        } else if (hourBlock == moment().hour()) {
+          $(this).css("background-color", "red");
+        } else if (hourBlock > moment().hour()) {
+          $(this).css("background-color", "lightgreen");
+        }
+      })
 
-    //Event listeners
-    $(".btn").on("click", function() {
-      var event = $(".form-control").val();
-      console.log(event);
-      localStorage.setItem
+      //Event listeners
+      $(".btn").on("click", function() {
+        var eventArray = [];
+        $(".form-control").each(function() {
+          eventArray.push({ time: $(this).attr("data-value"), event: $(this).val()});
+          localStorage.setItem("allEvents", JSON.stringify(eventArray));
+        })
+        console.log(eventArray);
+      })
 
     })
 
