@@ -38,7 +38,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=9>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2" >SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=9>SAVE</button>
           </div>
         </section>
       </div>
@@ -50,7 +50,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=10>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=10>SAVE</button>
           </div>
         </section>
       </div>
@@ -62,7 +62,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=11>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=11>SAVE</button>
           </div>
         </section>
       </div>
@@ -74,7 +74,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=12>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=12>SAVE</button>
           </div>
         </section>
       </div>
@@ -86,7 +86,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=13>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=13>SAVE</button>
           </div>
         </section>
       </div>
@@ -98,7 +98,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=14>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=14>SAVE</button>
           </div>
         </section>
       </div>
@@ -110,7 +110,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=15>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=15>SAVE</button>
           </div>
         </section>
       </div>
@@ -122,7 +122,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=16>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=16>SAVE</button>
           </div>
         </section>
       </div>
@@ -134,7 +134,7 @@
         <section class="col-sm-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=17>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-value=17>SAVE</button>
           </div>
         </section>
       </div>
@@ -171,10 +171,16 @@
 
       //Event listeners
       $(".btn").on("click", function() {
-        var eventArray = [];
+        var clickedButton = $(this).attr("data-value");
+        var eventArray = JSON.parse(localStorage.getItem("allEvents"));
+        if (eventArray === null) {
+          var eventArray = [];
+        }
         $(".form-control").each(function() {
+          if (clickedButton == $(this).attr("data-value")) {
           eventArray.push({ time: $(this).attr("data-value"), event: $(this).val()});
           localStorage.setItem("allEvents", JSON.stringify(eventArray));
+          }
         })
         console.log(eventArray);
       })
