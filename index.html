@@ -138,6 +138,13 @@
           </div>
         </section>
       </div>
+      <div class="row">
+        <section class="col-sm-2"></section>
+        <section class="col-sm-8">
+         <button type="button" class="btn btn-primary btn-lg btn-block clear-button">Save All</button>
+        </section>
+        <section class="col-sm-2"></section>
+      </div>
        
     </div>
 
@@ -163,14 +170,14 @@
         if (hourBlock < moment().hour()) {
           $(this).css("background-color", "grey");
         } else if (hourBlock == moment().hour()) {
-          $(this).css("background-color", "red");
+          $(this).css("background-color", "yellow");
         } else if (hourBlock > moment().hour()) {
           $(this).css("background-color", "lightgreen");
         }
       })
 
       //Event listeners
-      $(".btn").on("click", function() {
+      $(".btn-outline-secondary").on("click", function() {
         var clickedButton = $(this).attr("data-value");
         var eventArray = JSON.parse(localStorage.getItem("allEvents"));
         if (eventArray === null) {
@@ -182,7 +189,18 @@
           localStorage.setItem("allEvents", JSON.stringify(eventArray));
           }
         })
-        console.log(eventArray);
+      })
+
+      $(".clear-button").on("click", function() {
+        var eventArray = JSON.parse(localStorage.getItem("allEvents"));
+        if (eventArray === null) {
+          var eventArray = [];
+        }
+        $(".form-control").each(function() {
+          eventArray.push({ time: $(this).attr("data-value"), event: $(this).val()});
+          localStorage.setItem("allEvents", JSON.stringify(eventArray));
+        })
+
       })
 
     })

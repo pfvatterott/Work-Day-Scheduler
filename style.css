@@ -79,11 +79,11 @@ textarea{
   padding-top: 50%;
 }
 
-.timerow {
-  /* position: relative; */
-  /* top: -50px; */
-}
-
 #button-addon2 {
   background-color: lightblue;
+}
+
+.clear-button {
+  margin-top: 50px;
+
 }
