@@ -31,7 +31,6 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
       <div class="row">
         <section class="col-sm-1">
           <p class="worktime">9AM</p>
@@ -158,6 +157,14 @@
       } else if (hourBlock > moment().hour()) {
         $(this).css("background-color", "lightgreen");
       }
+    })
+
+    //Event listeners
+    $(".btn").on("click", function() {
+      var event = $(".form-control").val();
+      console.log(event);
+      localStorage.setItem
+
     })
 
   
