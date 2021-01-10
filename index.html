@@ -18,7 +18,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -31,92 +32,141 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      
       <div class="row">
         <section class="col-sm-1">
           <p class="worktime">9AM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=9>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" >SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">10AM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=10>
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">11AM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=11>
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">12PM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>           
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=12>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">1PM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>   
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=13>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">2PM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button> 
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=14>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">3PM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=15>
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">4PM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=16>
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
+      </div>
+      <br><br>
+      <div class="row">
         <section class="col-sm-1">
           <p class="worktime">5PM</p>
         </section>
         <section class="col-sm-11">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=17>
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">SAVE</button>
           </div>
         </section>
       </div>
+       
     </div>
 
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //Time and Date at Top of Page
+      $("#currentDay").html((moment().format('MMMM Do YYYY')) + "<br><br>" + moment().format('LT'));
+    })
+    //Colors Text Boxes Depending on Time
+    $(".form-control").each(function() {
+      var hourBlock = $(this).attr("data-value");
+      console.log(hourBlock)
+      if (hourBlock < moment().hour()) {
+        $(this).css("background-color", "grey");
+      } else if (hourBlock == moment().hour()) {
+        $(this).css("background-color", "red");
+      } else if (hourBlock > moment().hour()) {
+        $(this).css("background-color", "lightgreen");
+      }
+    })
+
+  
+
+
+
+
+
+  </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
