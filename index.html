@@ -30,7 +30,7 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container-fluid">
+    <main class="container-fluid">
       <div class="row">
         <section class="col-1">
           <hr class="my-0">
@@ -39,7 +39,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=9>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=9></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=9></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=9></button>
           </div>
         </section>
@@ -53,7 +53,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=10>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=10></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=10></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=10></button>
           </div>
         </section>
@@ -67,7 +67,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=11>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=11></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=11></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=11></button>
           </div>
         </section>
@@ -81,7 +81,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=12>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=12></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=12></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=12></button>
           </div>
         </section>
@@ -95,7 +95,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=13>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=13></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=13></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=13></button>
           </div>
         </section>
@@ -109,7 +109,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=14>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=14></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=14></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=14></button>
           </div>
         </section>
@@ -123,7 +123,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=15>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=15></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=15></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=15></button>
           </div>
         </section>
@@ -137,7 +137,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=16>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=16></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=16></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=16></button>
         </section>
       </div>
@@ -150,7 +150,7 @@
         <section class="col-11">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" data-value=17>
-            <button class="btn btn-outline-secondary far fa-save" type="button" id="button-addon2" data-value=17></button>
+            <button class="btn btn-outline-secondary save-button far fa-save" type="button" id="button-addon2" data-value=17></button>
             <button class="btn btn-outline-secondary clear-button far fa-trash-alt" type="button" data-value=17></button>
           </div>
         </section>
@@ -171,7 +171,7 @@
         <section class="col-2"></section>
       </div>
        
-    </div>
+    </main>
 
   <script type="text/javascript">
     $(document).ready(function() {
@@ -202,9 +202,8 @@
       })
 
       //Event listeners
-
       //Save Buttons for each row
-      $(".btn-outline-secondary").on("click", function() {
+      $(".save-button").on("click", function() {
         var clickedButton = $(this).attr("data-value");
         var eventArray = JSON.parse(localStorage.getItem("allEvents"));
         if (eventArray === null) {

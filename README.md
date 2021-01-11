@@ -4,20 +4,19 @@
 
 ## Description
 
-For this project I used Javascript, HTML, and CSS to create a multi question, multiple choice quiz.
+For this project I used JQuery, HTML, and CSS to create a responsive and intuitive work day scheduler.
 
 Here are some key features:
 
-1. Start button that initializes a countdown and then the quiz itself
-2. A timer that will terminate the quiz if it reaches zero. The timer is also tracked for the final score.
-3. Ten unique questions with four answers for the user to choose from.
-4. When the user selects an answer the program will alert the user if it was correct or incorrect.
-5. A final score that is a combination of the correct amount of answers (each is worth 3 points) and the time remaining.
-6. A scoreboard that auto generates based on the amount of saved scores in local storage.
-7. A scoreboard that orders the scores from highest to lowest.
-7. A button that will clear all highscores.
-8. A button that will restart the quiz.
-9. A score tracker so the user can see their current score while taking the quiz.
+1. A date and time that auto updates each time the page is refreshed.
+2. Nine timeblocks, each for an hour of the workday, where the user can input events.
+3. For each timeblock a save button that only saves text inputs for that specific timeblock.
+4. For each timeblock a clear button that only clears text inputs for that specific timeblock.
+5. Timeblocks automatically change color depending on if they're in the past, present, or future.
+6. A "Save All" button that saves text inputs for every timeblock.
+7. A "Clear All" button that clears all text inputs for every timeblock.
+8. Save buttons that save user text inputs into local storage.
+9. Timeblocks auto-fill if local storage is available.
 
 ## Installation
 
@@ -27,15 +26,7 @@ To view this website open up the index.html doc using your favorite web browser.
 
 ## Screenshot of Main Page
 
-![Landing page screen shot](assets/images/startingpagescreenshot.png)
 
-## Question Example
-
-![Question Example](assets/images/questionexample.png)
-
-## Scoreboard Example
-
-![Scoreboard Example](assets/images/Scoreboard.png)
 
 ## Contributing
 
