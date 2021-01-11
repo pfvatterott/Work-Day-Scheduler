@@ -66,7 +66,6 @@ textarea{
   top: 40%;
   left: 50%;
   font-weight: bold;
-  border-bottom: 2px solid black;
 }
 
 #button-addon2 {
@@ -81,8 +80,11 @@ textarea{
   margin-top: -10px;
 }
 
-.my-4 {
+.my-0 {
   position: relative;
-  top: -12%;
-  right: -60%;
+  width: 200px;
+}
+
+.col-11 {
+  padding-left: 30px;
 }
