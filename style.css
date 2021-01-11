@@ -70,10 +70,12 @@ textarea{
 
 #button-addon2 {
   background-color: lightblue;
+  width: 50px;
 }
 
 .clear-button {
   background-color: lightcoral;
+  width: 50px;
 }
 
 .clear-all-button {
