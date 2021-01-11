@@ -1,4 +1,4 @@
-![Logo of the project](assets/images/MyPost.png)
+![Logo of the project](assets/MyPost.png)
 
 # Work Day Scheduler
 
@@ -26,6 +26,7 @@ To view this website open up the index.html doc using your favorite web browser.
 
 ## Screenshot of Main Page
 
+![Landing page screen shot](assets/screenshot.png)
 
 
 ## Contributing
